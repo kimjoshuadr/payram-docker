@@ -1,6 +1,9 @@
 services:
   payram:
-    image: payramapp/payram:3.8.2
+    # Built from this repo: the pinned vendor release plus our SSO landing page.
+    # Keeping the service name `payram` preserves Coolify's domain mapping.
+    build:
+      context: .
     restart: unless-stopped
     environment:
       AES_KEY: ${AES_KEY}
