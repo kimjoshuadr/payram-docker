@@ -2,8 +2,6 @@ services:
   payram:
     image: payramapp/payram:3.8.2
     restart: unless-stopped
-    ports:
-      - "5432:5432"
     environment:
       AES_KEY: ${AES_KEY}
       BLOCKCHAIN_NETWORK_TYPE: ${BLOCKCHAIN_NETWORK_TYPE}
